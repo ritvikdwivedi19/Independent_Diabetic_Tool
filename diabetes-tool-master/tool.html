@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="UTF-8">
+      <title>Independent Diabetes Tool</title>
+      <link rel="stylesheet" href="style/style.css" type="text/css">
+      <script type="text/javascript" src="script/script2.js"></script>
+  </head>
+  <body>
+    <a href="index.html">
+      <header>
+        <h1>Independent Diabetes Tool</h1>
+        <h3>Find out your risk for diabetes</h3>
+      </header>
+    </a>
+      <main>
+
+        <!-- Introduction -->
+        <div id="introduction">
+          <h2>Introduction</h2>
+          <p>The purpose of this webpage is to demostrate that using vanilla js can achieve a complete web application.
+            None of the data here collected is saved in any shape or form. The test follows the same one that can be found in <a href="https://riskscore.diabetes.org.uk/start"><strong>here</strong></a>.</p><br>
+          <p>It is important that if you seek medical advice regarding diabetes you visit your doctor.</p>
+          <div class="button tool" id=ok>Ok</div>
+          <a href="index.html"><div class="button tool" id=back>Back</div></a>
+        </div>
+        <!-- Question 1: Gender -->
+        <div id="question1">
+          <h2 id="gender_title">1) What is your gender?</h2>
+          <div class="button tool" id=male>Male</div>
+          <div class="button tool" id=female>Female</div>
+        </div>
+        <!-- Question 2: Age -->
+        <div id="question2">
+          <h2 id="age_title">2) What is your age?</h2>
+          <input type="text" id="age" class="input_box" autofocus="autofocus">
+          <span id="ageEmpty">You can't leave the field blank</span>
+          <span id="ageWrong">Please introduce a valid age. Try again.</span>
+          <span id="ageYoung">You won't be able to find out your risk using the "Independent Diabetes Tool" if you're under 18.
+               This is because your risk of Type 2 diabetes will not be accurate.</span>
+          <br>
+          <div class="button tool" id="ok_age">Ok</div>
+       </div>
+
+       <!-- Question 3: Ethnic -->
+       <h2 id="ethnic_title">3) What is your ethnic background?</h2>
+           <div id="question3">
+               <div class="container left">
+                 <div class="button tool list" id="asian">South Asian</div>
+                 <div class="button tool list" id="black">Black</div>
+                 <div class="button tool list" id="chinese">Chinese</div>
+               </div>
+               <div class="container right">
+                 <div class="button tool list" id="mixed">Mixed Etnicity</div>
+                 <div class="button tool list" id="white">White</div>
+                 <div class="button tool list" id="none">None of These</div>
+               </div>
+           </div>
+
+        <!-- Question 4: Family -->
+          <div id="question4">
+              <h2 id="family_title">4) Do you have a parent, brother, sister and/or own child with diabetes?</h2>
+              <div class="button tool" id="familyYes">Yes</div>
+              <div class="button tool" id="familyNo">No</div>
+          </div>
+
+          <!-- Question 5: Waist -->
+
+            <div id="question5">
+                <h2 id="waist_title">5) What is your waist measurement in (cm)?</h2>
+                <input type="text" id="waist" class="input_box" required="required">
+                <span id="waistEmpty">You can't leave the field blank</span>
+                <span id="waistWrong">Introduce a valid waist measurement. Please try again.</span>
+                <br>
+                <div class="button tool" id="ok_waist">Ok</div>
+            </div>
+
+            <!-- Question 6: BMI -->
+
+            <div id="question6">
+                <h2 id="bmi_title">5) Let's calculate your BMI</h2>
+                <h3>How tall are you in centimeters?</h3>
+                <input type="text" id="height" class="input_box" required="required">
+                <span id="heightEmpty">You can't leave the field blank</span>
+                <span id="heightWrong">Introduce a valid waist measurement. Please try again.</span>
+                <h3>How much do you weigh in kilograms?</h3>
+                <input type="text" id="weight" class="input_box" required="required">
+                <span id="weightEmpty">You can't leave the field blank</span>
+                <span id="weightWrong">Introduce a valid waist measurement. Please try again.</span>
+                <h3>Your BMI is...</h3>
+                <input type="text" id="bmi" class="input_box">
+                <br>
+                <div class="button tool" id="ok_bmi">Ok</div>
+            </div>
+
+            <!-- Question 7: Medication -->
+
+            <div id="question7">
+              <h2 id="medication_title">7) Have you ever taking medication for High Blood Pressure?</h2>
+              <div class="button tool" id="medicationYes">Yes</div>
+              <div class="button tool" id="medicationNo">No</div>
+            </div>
+
+            <!-- Question 8: RESULTS -->
+
+            <div id="question8">
+              <h2>Thank You!</h2>
+              <div id="lowRisk" class="answers">
+                  <h2>Your risk is Low.</h2>
+                  <p>1 in 20 people with your risk will get Type 2 diabetes in the next 10 years.</p>
+                  <p>You can't change your age or your genes. But if your risk is partly due to your lifestyle, a few small changes can make a big difference.</p>
+                  <a href="index.html"><div class="button tool" id=back>Back</div></a>
+              </div>
+              <div id="increasedRisk" class="answers">
+                  <h2>Your risk is Increased.</h2>
+                  <p>1 in 10 people with your risk will get Type 2 diabetes in the next 10 years.</p>
+                  <p>You can't change your age or your genes. But if your risk is partly due to your lifestyle, a few small changes can make a big difference.</p>
+                  <a href="index.html"><div class="button tool" id=back>Back</div></a>
+              </div>
+              <div id="moderateRisk" class="answers">
+                  <h2>Your risk is Moderate</h2>
+                  <p>1 in 7 people with your risk will get Type 2 diabetes in the next 10 years.</p>
+
+                  <p>Your health is at risk. You need to visit your GP surgery as soon as possible to be tested for Type 2 diabetes.
+                  You can't change your age or your genes. But if your risk is partly due to your lifestyle, a few small changes can make a big difference.</p>
+                  <a href="index.html"><div class="button tool" id=back>Back</div></a>
+              </div>
+              <div id="highRisk" class="answers">
+                  <h2>Your risk is High</h2>
+                  <p>1 in 3 people with your risk will get Type 2 diabetes in the next 10 years.</p>
+                  <p>Your health is at risk. You need to visit your GP surgery as soon as possible to be tested for Type 2 diabetes.
+                      Talk to your doctor about the areas that you can change to reduce your risk.</p>
+                  <a href="index.html"><div class="button tool" id=back>Back</div></a>
+              </div>
+            </div>
+      </main>
+      <footer>
+        <h3>Independent Diabetes Information Tool &copy; </h3>
+        <h4>Ritvik Dwivedi</h4>
+      </footer>
+  </body>
+</html>
